@@ -1,0 +1,29 @@
+.buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8rem;
+}
+
+.buscadorInput {
+    padding: 10px;
+    border: none;
+    width: 288px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.buscadorAction {
+    margin-left: 1rem;
+    border: none;
+    background-color: blueviolet;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.buscadorAction:hover {
+    background-color: rgb(111, 46, 171);
+}

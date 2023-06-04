@@ -1,0 +1,58 @@
+.contenedor {
+    background-image: linear-gradient(to right, #b136d9, #c452de, #d56ce4, #e485eb, #f29df2);
+    color: #fff;
+    width: 400px;
+    padding: 8PX;
+    border-radius: 10px;
+    margin-left: 10rem;
+}
+
+.contenedor > h2 {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.tipoDeRegistro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.tipoDeRegistro > label { margin-right: 5px; }
+.tipoDeRegistroInput {
+    margin-right: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.group > input {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+.btnForm {
+   margin-top: 1.3rem;
+    border: none;
+    background-color: blueviolet;
+    padding: 10px 18px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.btnForm:hover {
+    background-color: rgb(111, 46, 171);
+}

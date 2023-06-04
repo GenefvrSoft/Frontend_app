@@ -1,0 +1,22 @@
+.contenedor {
+    width: 800px;
+    border: 2px solid blueviolet;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(118, 35, 195);
+}
+
+.tabla {
+    margin-top: 2rem;
+    padding: 10px;
+
+}
+
+.tablaRow {
+    border-bottom: 2px solid blueviolet;
+    margin-bottom: .5rem;
+    padding-bottom: 3px;
+}

@@ -1,0 +1,43 @@
+.tarjetapociones {
+    height: auto;
+    border: 1px solid #8a2be2;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.imagenPocion > img{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.infoPocion {
+    margin-top: -5px;
+}
+
+.nombrePocion {
+    background-image: linear-gradient(to right, #b136d9, #c452de, #d56ce4, #e485eb, #f29df2);
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+}
+
+.infoPocionSubtitle { 
+    background-color: #772495;
+    height: 28px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcionPocion {
+    padding: 10px;
+}
+
+.descripcionPocion > p{
+    word-wrap: break-word;
+}

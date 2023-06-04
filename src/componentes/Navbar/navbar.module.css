@@ -1,0 +1,13 @@
+.nav {
+    height: 50px;
+    color: white;
+    background-image: linear-gradient(to right, #b136d9, #c452de, #d56ce4, #e485eb, #f29df2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloPagina {
+    font-size: 25px;
+    margin-left: 2rem;
+}
