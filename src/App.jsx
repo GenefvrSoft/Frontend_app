@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import { obtenerPocionesAction } from './actions/pocionesActions'
 import { obtenerIngredientesAction } from './actions/ingredientesActions'
 
+
 function App() {
   const [pociones, setPociones] = useState([]);
   const [ingredientes, setIngredientes] = useState([]);
@@ -29,13 +30,13 @@ function App() {
 
   return (
     <>
-     <Navbar  setPociones={setPociones} />
+     <Navbar setPociones={setPociones} />
      <img src={imagenPocion} className={style.imagenPrincipal} alt="Encabezado"/>
      <div className={style.contenedorPociones}>
        {
         pociones.length > 0 && 
           pociones.map(pocion => (
-            <TarjetaPociones key={pocion.id} nombre={pocion.nombre} descripcion={pocion.descripcion} precio={pocion.precio} cantidad={pocion.cantidad} categoria={pocion.categoria} ingredientes={pocion?.ingrediente?.nombre} />
+            <TarjetaPociones key={pocion.id} imagen={pocion.imagen} ingredienteId={pocion.ingredienteId} id={pocion.id} setPociones={setPociones} pociones={pociones}  nombre={pocion.nombre} descripcion={pocion.descripcion} precio={pocion.precio} cantidad={pocion.cantidad} categoria={pocion.categoria} ingredientes={pocion?.ingrediente?.nombre} />
           ))
        }
      </div>

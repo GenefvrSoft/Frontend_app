@@ -3,6 +3,7 @@ import style from './formulario.module.css'
 import { useForm } from '../../utils/useForm'
 import { crearPocionAction } from '../../actions/pocionesActions'
 import { crearIngredientesAction } from '../../actions/ingredientesActions'
+import { alertSuccess } from '../../utils/alert'
 
 function Formulario({setPociones, pociones, setIngredientes, ingredientes}) {
     const {values, handleInputChange, reset} = useForm({nombre: '', descripcion: '', precio: '', cantidad: '', categoria: '', imagen: '', ingredienteId: ''})
@@ -10,16 +11,17 @@ function Formulario({setPociones, pociones, setIngredientes, ingredientes}) {
 
     const tipoDeRegistroSeleccionado = (tipo) => setTipoDeRegistro(tipo);
 
-    const onSubmit = (e) => {
+    const onSubmit = async(e) => {
         e.preventDefault();
         const { nombre, descripcion, cantidad } = values;
         if ( tipoDeRegistro === 'ingrediente' ) {
             crearIngredientesAction({nombre, descripcion, cantidad})
             setIngredientes([...ingredientes, {id: ingredientes?.length +1, nombre, descripcion, cantidad}])            
         } else {
-            crearPocionAction(values);
-            setPociones([values, ...pociones])
+            const respuesta = await crearPocionAction(values);
+            setPociones([respuesta, ...pociones])
         }
+        alertSuccess('Registro exitoso');
         reset();
     }
 

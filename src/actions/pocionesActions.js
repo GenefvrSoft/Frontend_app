@@ -23,24 +23,24 @@ export const obtenerPocionesParametrosAction = async (nombre, descripcion, canti
 export const crearPocionAction = async (datos) =>  {
     try {
         const { data } = await crearPocion(datos);
+        return data.pocion;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const actualizarPocionAction = async (nuevaData) =>  {
+    try {
+        const { data } = await actualizarPocion(nuevaData);     
         return data;
     } catch (error) {
         console.log(error)
     }
 }
 
-export const actualizarPocionAction = async () =>  {
+export const eliminarPocionAction = async (idPocion) =>  {
     try {
-        const { data } = await actualizarPocion();
-        return data;
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-export const eliminarPocionAction = async () =>  {
-    try {
-        const { data } = await eliminarPocion();        
+        const { data } = await eliminarPocion(idPocion);             
         return data;
     } catch (error) {
         console.log(error)

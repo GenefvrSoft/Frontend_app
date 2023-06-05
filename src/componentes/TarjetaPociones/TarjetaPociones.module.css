@@ -3,12 +3,38 @@
     border: 1px solid #8a2be2;
     border-radius: 3px;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .imagenPocion > img{
     max-width: 100%;
     height: 100%;
     border-radius: 3px;
+}
+
+.borrarIcon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #772495;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.borrarIcon > img {
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.borrarIcon:hover {
+    background-color: #9b36c0;
 }
 
 .infoPocion {
